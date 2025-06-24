@@ -5,14 +5,8 @@ app.get("/", (req, res)=>{
     res.send("Seja bem vindo ao nosso site")
 })
 
-app.get("/artigos/:id", (req, res)=>{
-    if(req.params.id == '1'){
-        res.send('1 - Como criar aplicativos Android e IOS')
-    }else if(req.params.id == '2'){
-        res.send('2 - Como usar o Node.Js')
-    }else{
-        res.send('Não encontrado...')
-    }
+app.get("/artigos/", (req, res)=>{
+    res.send('Todos os artigos')
 })
 
 app.get("/contato", (req, res)=>{
