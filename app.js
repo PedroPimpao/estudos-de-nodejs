@@ -1,3 +1,7 @@
-console.log('Hello, World')
-console.log('Hello, World Teste')
-console.log('Hello, World Teste 2')
+const express = require('express')
+const app = express()
+
+app.listen(8081, ()=>{
+    console.log('O servidor está rodando...')
+})
+
