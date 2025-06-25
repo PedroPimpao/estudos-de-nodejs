@@ -10,11 +10,15 @@ const sequelize = new Sequelize(
     }
 )
 
-sequelize.authenticate().then((()=>{
-    console.log('Banco de dados conectado com sucesso!')
-})).catch((erro)=>{
-    console.error(`Erro ao conectar com o banco de dados: ${erro}`)
-})
+const conectar = async ()=>{
+    try {
+        await sequelize.authenticate()
+        console.log('Banco de dados conectado com sucesso!')
+    } catch (error) {
+        console.error(`Erro ao conectar com o banco de dados: ${error}`)
+    }
+}
+conectar()
 
 module.exports = {
     Sequelize: Sequelize,
