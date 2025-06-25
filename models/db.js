@@ -1,4 +1,4 @@
-const { Sequelize } = require("sequelize")
+import { Sequelize } from "sequelize"
 
 const sequelize = new Sequelize(
     'Cadastro_Produtos',
@@ -20,7 +20,4 @@ const conectar = async ()=>{
 }
 conectar()
 
-module.exports = {
-    Sequelize: Sequelize,
-    sequelize: sequelize
-}
+export { Sequelize, sequelize }
