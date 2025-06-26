@@ -1,4 +1,5 @@
 import express from 'express'
+import { Produto } from './models/Produtos.js'
 const app = express()
 
 app.get("/", (req, res)=>{

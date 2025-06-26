@@ -25,7 +25,6 @@ Produto.destroy({
     where: {id: 7}
 })
 
-
-
-
 Produto.sync({force: false})
+
+export { Produto }
