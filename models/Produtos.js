@@ -15,16 +15,6 @@ const Produto = sequelize.define('produtos', {
     }
 })
 
-// Produto.create({
-//     nome: 'Monitor T350 24``',
-//     preco: '420.99',
-//     descricao: 'Monitor da Samsung'
-// })
-
-Produto.destroy({
-    where: {id: 7}
-})
-
 Produto.sync({force: false})
 
 export { Produto }

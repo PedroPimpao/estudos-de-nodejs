@@ -1,20 +1,27 @@
 import express from 'express'
 import { Produto } from './models/Produtos.js'
+import bodyParser from 'body-parser'
+
 const app = express()
+const PORT=3000
 
-app.get("/", (req, res)=>{
-    res.send("Seja bem vindo ao nosso site")
+// Configurando Body Parser
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
+app.post('/cadastro', (req, res)=>{
+    Produto.create({
+        nome: req.body.nome,
+        preco: req.body.preco,
+        descricao: req.body.descricao
+    }).then(()=>{
+        res.send('Produto cadastrado com sucesso!')
+    }).catch((erro)=>{
+        res.send(`Erro ao cadastrar produto: ${erro}`)
+    })
 })
 
-app.get("/artigos/", (req, res)=>{
-    res.send('Todos os artigos')
-})
-
-app.get("/contato", (req, res)=>{
-    res.send('Deixe sua mensagem...')
-})
-
-app.listen(8081, ()=>{
+app.listen(PORT, ()=>{
     console.log('O servidor está rodando...')
 })
 
