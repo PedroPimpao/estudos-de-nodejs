@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js" defer></script>
+    <title>Cadastro de Produtos</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="operations">
+            <form method="post" id="cadastrar-produto">
+                <h2>Cadastrar Produto</h2>
+                <input 
+                type="text" 
+                id="nome-produto" 
+                class="input-field" 
+                placeholder="Nome"
+                >
+
+                <input 
+                type="text" 
+                id="preco-produto" 
+                class="input-field" 
+                placeholder="R$0.00"
+                >
+
+                <textarea 
+                name="descricao-produto" 
+                id="descricao-produto"
+                placeholder="Descrição..."
+                ></textarea>
+
+                <input type="button" value="Cadastrar" class="submitButton" id="btn-cadastrar">
+            </form>
+
+            <form id="buscar-produto-nome">
+                <h2>Buscar Produto (Nome)</h2>
+                <input 
+                type="text" 
+                placeholder="Nome" 
+                id="buscar-nome-produto"
+                class="input-field" 
+                >
+                
+
+                <input type="button" value="Buscar" class="submitButton" id="btn-buscar-nome">
+            </form>
+
+            <form id="buscar-id">
+                <h2>Buscar Produto ( ID )</h2>
+                <input 
+                type="text"
+                placeholder="ID do Produto"
+                id="buscar-id-produto"
+                class="input-field"
+                >
+                
+                <input type="button" value="Buscar" class="submitButton" id="btn-buscar-id">
+            </form>
+
+            <form id="atualizar-produto">
+                <h2>Atualizar Produto</h2>
+                <input 
+                type="text" 
+                id="nome-produto-atualizar" 
+                class="input-field" 
+                placeholder="Nome"
+                >
+
+                <input 
+                type="text" 
+                id="preco-produto-atualizar" 
+                class="input-field" 
+                placeholder="R$0.00"
+                >
+
+                <textarea 
+                name="descricao-produto" 
+                id="descricao-produto-atualizar"
+                placeholder="Descrição..."
+                ></textarea>
+                
+
+                <input type="button" value="Atualizar" class="submitButton" id="btn-atualizar">
+            </form>
+
+            <form id="remover-produto">
+                <h2>Buscar Produto ( ID )</h2>
+                <input 
+                type="text"
+                placeholder="ID do Produto"
+                id="buscar-id-produto"
+                class="input-field"
+                >
+                
+                <input type="button" value="Remover" class="submitButton" id="btn-remover">
+            </form>
+        </div>
+        <div class="products">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+:root{
+    --bodyBackground: #202020;
+    --mainContainerBackground: #303030;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--bodyBackground);
+}
+
+.main-container{
+    height: 80vh;
+    width: 80%;
+    background-color: var(--mainContainerBackground);
+    border: 1px solid #c0c0c0;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-container > *{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main-container .operations{
+    border-right: 1px solid #c0c0c0;
+    padding-right: 20px;
+    gap: 30px;
+    overflow-y: scroll;
+}
+
+.main-container .products{
+    border-left: 1px solid #c0c0c0;
+    padding-left: 20px;
+    overflow-y: scroll;
+}
+
+.products::-webkit-scrollbar, .operations::-webkit-scrollbar{
+    background-color: transparent;
+    width: 4px;
+}
+.products::-webkit-scrollbar-thumb, .operations::-webkit-scrollbar-thumb{
+    background-color: #c0c0c0;
+    width: 4px;
+}
+
+.operations form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.submitButton{
+    padding: 5px;
+    background-color: #00ffff93;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 1em;
+    cursor: pointer;
+}
+.submitButton:active{
+    background-color: #00ffff4d;
+}
+
+.input-field, .operations textarea{
+    background-color: transparent;
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    color: #FFF;
+}
+
+.operations textarea{
+    height: 80px;
+    resize: none;
+}
+
+.operations h2{
+    color: #fff;
+    margin-left: 10px;
+}

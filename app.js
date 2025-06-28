@@ -3,7 +3,7 @@ import { Produto } from './models/Produtos.js'
 import bodyParser from 'body-parser'
 
 const app = express()
-const PORT=3000
+export const PORT=3000
 
 // Configurando Body Parser
 app.use(bodyParser.urlencoded({extended: false}))
@@ -37,7 +37,6 @@ app.get('/', (req, res)=>{
 app.get('/:nome', (req, res)=>{
     Produto.findAll({where: {"nome": req.params.nome}}).then((produto)=>{
         res.send(produto)
-        // res.send("Consulta realizada com sucesso!")
     }).catch((erro)=>{
         res.send(`Produto não encontrado: ${erro}`)
     })
