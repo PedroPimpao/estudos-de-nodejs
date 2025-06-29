@@ -13,14 +13,19 @@ const createProduct=(evt)=>{
     const createPrice = parseFloat(document.querySelector('#preco-produto').value)
     const createDescription = document.querySelector('#descricao-produto').value
 
+    const data={
+        nome: createName,
+        preco: createPrice,
+        descricao: createDescription
+    }
+
     fetch(`${URL}/cadastro`, {
         method:'POST',
         headers: {'Content-Type' : 'application/json'},
-        body: JSON.stringify({createName, createPrice, createDescription})
+        body: JSON.stringify(data)
     })
-    .then(data => {
-        data.text()
-    })
+    .then(data => data.text())
+    .then(result => console.log(result))
     .catch((erro)=>{
         console.log(`Não foi possível cadastrar o produto: ${erro}`)
     })
