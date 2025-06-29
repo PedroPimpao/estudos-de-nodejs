@@ -1,6 +1,8 @@
 import express from 'express'
 import { Produto } from './models/Produtos.js'
 import bodyParser from 'body-parser'
+import cors from 'cors'
+
 
 const app = express()
 export const PORT=3000
@@ -10,6 +12,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 // /Configurando Body Parser
 
+app.use(cors())
 
 // Create
 app.post('/cadastro', (req, res)=>{
