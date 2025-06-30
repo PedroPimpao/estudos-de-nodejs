@@ -46,6 +46,9 @@ body{
     border-left: 1px solid #c0c0c0;
     padding-left: 20px;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .products::-webkit-scrollbar, .operations::-webkit-scrollbar{
@@ -93,4 +96,14 @@ body{
 .operations h2{
     color: #fff;
     margin-left: 10px;
+}
+
+.product{
+    border: 1px solid #c0c0c0;
+    padding: 8px;
+    border-radius: 5px;
+    color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
